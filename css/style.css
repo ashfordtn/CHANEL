@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  scroll-behavior: smooth;
+  transition: all O.4s cubic-bezier(0,1.57,.67,1.18);
+}
+
+/******************************* HEADER SETTINGS ******************************/
+
+html {
+ scrollbar-width: thin;
+ scrollbar-color: #bc9667 black;
+}
+
+html::-webkit-scrollbar{
+  width: 1vw;
+}
+
+
+html::-webkit-scrollbar-thumb {
+  background-color: #bc9667;
+}
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+header {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  transition: 0.5s linear;
+  border-bottom: 2px solid;
+}
+@media only screen and (max-width : 768px) {
+    header {
+    padding: 25px;
+    display:block;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    }
+    .logo {
+      margin-bottom: 25px;
+    }
+   }
+
+
+/******************************* MENU SETTINGS ******************************/
+
+
+.logo {
+  width: 130px;
+  height: 80px;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+
+.navbar li:hover {
+  color: #bc9667;
+  box-shadow: inset 0 3px;
+}
+
+.navbar li a {
+  transition: .3s;
+  color: #1b1b1b;
+}
+
+.navbar li a:hover {
+  color: grey;
+}
+
+
+/******************************* BANNER SETTINGS ******************************/
+
+.banner-container {
+  height: 500px;
+  display:flex;
+  background-image: url("../images/site/banner.jpg");
+  background-size: cover;
+}
+
+.banner-column {
+  text-align: center;
+  color: white;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: inherit;
+}
+
+.banner-column img {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.banner-column h1 {
+  line-height: 1.5;
+  letter-spacing: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000000;
+}
+
+.banner-column p {
+  line-height: 2;
+  font-weight: normal;
+}
+
+.banner-container:after {
+  clear: both;
+}
+
+
+/********************************* HR SETTINGS ********************************/
+
+hr {
+  margin: auto;
+  border-style: dotted none none;
+  border-width: 15px;
+  border-color: black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 5%;
+}
+
+/****************************** CONTENT SECTION ********************************/
+
+/******** Fragrance section ********/
+
+.perfume-container {
+  margin-top: 25px;
+  padding: 0 5%;
+  display: flex;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.title span {
+  border-bottom: 4px solid #bc9667;
+}
+
+.perfume-col {
+  text-align: center;
+  margin: 0 4px;
+  display: inline-block;
+  margin-top: 25px;
+  width: 24%;
+  border: 2px solid #bc9667;
+  border-radius: 10px;
+  height: inherit;
+  padding: 10px;
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.perfume-container:after {
+  clear: both;
+}
+
+.perfume-box-title {
+  color: #1b1b1b;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.perfume-image {
+  margin-top: 25px;
+  width: 60%;
+}
+
+.perfume-col p {
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+/******** Makeup section ********/
+
+.makeup-container {
+  margin-top: 25px;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.makeup-col {
+  margin: 0 4px;
+  display: inline-block;
+  margin-top: 25px;
+  width: 100%;
+  height: inherit;
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.mtext-container {
+  width: 50%;
+  float: left;
+  padding: 10px;
+  text-align: center;
+}
+
+.makeup-title {
+  margin-top: 100px;
+  color: #1b1b1b;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+
+.mtext-container p {
+  font-weight: normal;
+}
+
+.makeup-image-right {
+  height: 360px;
+  width: 50%;
+  float: right;
+}
+
+.makeup-image-left {
+  height: 360px;
+  width: 50%;
+  float: left;
+}
+
+/******** Skincare Section ********/
+
+.skincare-container {
+  text-align: center;
+  margin-top: 25px;
+  padding: 0 5%;
+  display: inline-block;
+}
+
+.simage-container {
+  display: inline-block;
+  position: relative;
+  margin: 4px 4px;
+  width: 45%;
+  overflow: hidden;
+}
+
+.skincare-overlay {
+  position: absolute;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skincare-image {
+  width: 100%;
+  height: 100%;
+}
+
+.skincare-title {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px #000000;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.skincare-subtitle {
+  color: white;
+  font-size: 17px;
+  text-shadow: 2px 2px #000000;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  margin-top: 100px;
+  margin-bottom: 5px;
+}
+
+/****************************** FOOTER SECTION ********************************/
+
+.footer-container {
+  margin: 0% 9%;
+  padding: 5px;
+  border-top: 3px solid black;
+  padding-top: 20px;
+}
+
+.f-logo {
+  width: 80%;
+  margin-bottom: 0;
+}
+
+.footer-logo {
+  width: 25%;
+  float: left;
+  display: inline-block;
+}
+
+.footer-content {
+  width: 25%;
+  float: left;
+  display: inline-block;
+}
+
+.footer-title {
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.footer-item {
+  font-weight: normal;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.social-img {
+  height: 30px;
+  width: 30px;
+  margin: 10px 20px 0 0;
+}
+
+.gotop-btn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: 2px solid #bc9667;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.gotop-img {
+  width: 25px;
+  height: 25px;
+  margin-top: 9px;
+}
+
+/****************************** SHOP PAGE ***********************************/
+
+.title-container{
+  text-align: center;
+  margin-bottom: 40px;
+  align-items: center;
+  display:flex;
+  justify-content: center;
+}
+
+
+.title-container .shop-title {
+  margin: 40px;
+  color: #1b1b1b;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+  border-bottom: 4px solid #bc9667;
+  width: 99px;
+}
+
+.categories{
+  width: 15%;
+  float: left;
+  display:flex;
+}
+
+.categories ul li {
+  padding: 10px 0 0 30px;
+  font-weight: normal;
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+.categories h3 {
+  padding: 5px;
+}
+
+.categories ul li a{
+  font-weight: normal;
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+.products-container {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-left: 1px solid;
+  margin-bottom: 50px;
+  padding: 0 5%;
+}
+
+.product-card {
+  width: 265px;
+  position:relative;
+  border: 1px solid rgba(0,0,0,.3);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.info .product-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product-card .product-image {
+  text-align: center;
+  padding: 10px;
+}
+
+.product-card .product-image img {
+  width: 80%;
+  object-fit: cover;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.3));
+}
+
+.product-card .product-title {
+  padding: 10px;
+  color: #666;
+  font-size: 20px;
+}
+
+.product-card .sub-info {
+  display: flex;
+  padding: 0 25px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0,0,0,.3);
+}
+
+.product-card .sub-info .product-price{
+  padding: 10px;
+  color: #bc9667;
+  font-size: 18px;
+}
+
+.product-card .sub-info .stars i{
+  color:orange;
+  font-size: 15px;
+}
+
+.product-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 285px;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+  transform: scale(0);
+}
+
+.product-card:hover .overlay {
+  transform: scale(1);
+}
+
+.product-card .overlay a {
+  color: #666;
+  background: #fff;
+  margin: 10px;
+  padding: 13px 15px;
+  font-size: 25px;
+  transform: translateY(-170px);
+  transition-property: transform;
+  transition-delay: calc(.1s * var(--i));
+}
+
+.product-card:hover .overlay a{
+  transform: translateY(0px);
+}
+
+.product-card .overlay a:hover {
+  color: orange;
+}
+
+.category-path {
+  color: grey;
+  margin-left: 145px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+
+}
